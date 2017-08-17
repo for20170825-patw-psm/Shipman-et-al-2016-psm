@@ -1,9 +1,9 @@
-This is e-upTeX, Version 3.14159265-p3.7.1-u1.22-161114-2.6 (utf8.uptex) (TeX Live 2017) (preloaded format=uplatex 2017.8.12)  17 AUG 2017 00:26
+This is e-upTeX, Version 3.14159265-p3.7.1-u1.22-161114-2.6 (utf8.uptex) (TeX Live 2017) (preloaded format=uplatex 2017.8.12)  17 AUG 2017 23:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**tmp.tex
-(./tmp.tex
+**/home/ugos/wdir/PSM/main/tmp.tex
+(/home/ugos/wdir/PSM/main/tmp.tex
 pLaTeX2e <2017/07/29u01> (based on LaTeX2e <2017-04-15>)
 Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/platex/jsclasses/jsarticle.cls
@@ -982,23 +982,49 @@ LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 9.24683pt on input line 14.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 10.0pt on input line 14.
-)
-No file tmp.bbl.
-[1
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 39.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 39.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 39.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 39.
+LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <10> not available
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 39.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 39.
+(I search kanjifont definition file: . . ) (I search font definition file: . .
+. . . . . . . . )
+LaTeX Font Info:    Try loading font information for T1+ntxsups on input line 4
+1.
 
-] [2] (./tmp.aux)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/newtx/t1ntxsups.fd
+File: t1ntxsups.fd 2015/01/17 v1.0
+)
+LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
+(Font)              scaled to size 10.0pt on input line 41.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 41.
+LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
+(Font)              scaled to size 8.0pt on input line 41.
+ [1
+
+] [2])
+No file tmp.bbl.
+[3] [4] (./tmp.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 15891 strings out of 493644
- 289875 string characters out of 6149000
- 316580 words of memory out of 5000000
- 19143 multiletter control sequences out of 15000+600000
- 60192 words of font info for 130 fonts, out of 8000000 for 9000
+ 15942 strings out of 493644
+ 290817 string characters out of 6149000
+ 318582 words of memory out of 5000000
+ 19178 multiletter control sequences out of 15000+600000
+ 67584 words of font info for 134 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 55i,6n,54p,841b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,6n,54p,866b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tmp.dvi (2 pages, 3760 bytes).
+Output written on tmp.dvi (4 pages, 8336 bytes).

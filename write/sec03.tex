@@ -30,3 +30,54 @@
        る研究が 33 件ある。
  \item Heckman (1979) の代わりとして誤用してしまっている研究も存在する。
 \end{itemize}
+
+\paragraph{処置群の選択の方法 (Table 1 Panel C)}
+
+\begin{itemize}
+ \item 問題の所在
+       \begin{itemize}
+        \item 処置が 2 値変数 (dichotomous) であるならば、PSM の実施は単純である。
+        \item しかしながら、多様な状況でマッチングを実施するため、連続 (あるい
+              は順序) 変数に閾値を設けて変換することがある\footnote{2 値
+              変数を用いた処置群の選択について、例えば修正再表示のアナウ
+              ンスメントや IFRS のアドプションがあげられる。一方で、非 2
+              値変数を用いた処置群の選択について、企業の所有構造や監査人
+              の産業特殊性 (auditor industry specialization) があげられ
+              る}。
+       \end{itemize}
+ \item 問題点
+       \begin{itemize}
+        \item このような場合、閾値付近の観測値が over--represent される
+              傾向があり、それによって、効果の大きさ (および平均処置効果)
+              が消失し、第 II 種の過誤が生じる可能性が増大する。
+       \end{itemize}
+ \item 連続変数を用いている研究の数
+       \begin{itemize}
+        \item 34 件。また、この影響により、効果の大きさのみならずサンプ
+              ル・サイズも低下する。
+        \item 59 (12) 件の研究において、MR のサンプル・サイズの大きさは
+              PSM の 3 (10) 倍である。
+        \item サンプルサイズが小さいほど、サブサンプルは母集団を代表しな
+              くなる。
+       \end{itemize}
+\end{itemize}
+
+\paragraph{コントロール変数の選択 (Table 1 Panel C)}
+
+\begin{itemize}
+ \item MR と PSM のいずれを用いるにせよ、同様のコントロール変数を用いる
+       べきであるにもかかわらず、しばしば異なるコントロール変数が用いら
+       れていることがわかった。
+ \item MR からマッチングに用いた変数を除外することは、その変数が処置変数
+       (treatment) にも結果変数 (outcome) にも影響を与えないこと、
+       ひいては、その変数によるマッチングが不必要であることを意味するに
+       他ならない。
+ \item 分析においては、\textit{post hoc} なモデルの特定 (model
+       specification) をおこなっているという疑念 (appearance; 外観) を避
+       けるため、PSM と他のテストとの説明変数の不一致を検討すべきである。
+\end{itemize}
+
+\paragraph{傾向スコア推定後のマッチング・プロシージャ (Table 1 Panel C)}
+
+% p. 220 最終段落から p. 221 にかけての、``with replacement'' および
+% ``without replacement'' ってなんでしょうか。
