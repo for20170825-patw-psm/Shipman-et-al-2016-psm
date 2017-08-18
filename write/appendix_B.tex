@@ -1,0 +1,62 @@
+\section{Appendix B}
+\begin{longtable}[c]{ll}
+ \caption{Variable Descriptions}
+ \label{tab:appB}
+ \\
+ % -- ページの表の最上部 --
+ \hline
+  Variable Name & \hspace{5cm} Variable Definition \\ \hline
+ \endhead
+ % -- ページの表の最下部 --
+ \hline
+ \endfoot
+ % ------------------------
+  $\text{ABSACC}_{it}$ & 全ての産業--年度において最低10個の観測値をもとに以下の回帰式を推定し、\\
+  & 得られた誤差を業績とマッチさせて算定した裁量的会計発生高 \vspace{0.5cm} \\
+  \vspace{0.3cm}
+  & {$\!
+      \begin{aligned}
+     \frac{TA}{A} = \alpha + \lambda_{0} 
+       \frac{1}{A} + \lambda_{1} \frac{\Delta REV - \Delta REC}{A} 
+       + \lambda_{2}\frac{PPE}{A}
+      \end{aligned} $} \\
+  & \begin{tabular}{ll} \hline
+     $A$ & 総資産の平均値 \\
+     $\text{TA}$ & 総会計発生高 (= 経常利益 - 営業活動によるキャッシュ・フロー) \\
+     $\Delta REV$ & 売上高の変化額 \\
+     $\Delta REC$ & 売上債権の変化額 \\
+     $PPE$ & 有形固定資産 \\ \hline
+    \end{tabular} \vspace{0.3cm} \\ 
+  & 上記の回帰式から得られた各観測値の誤差を、\\
+  & 同じSIC (two-digit) コードでROAが最も近似している観測値から引いた絶対値を \\
+  & $\text{ABSACC}$ としている。\\
+  $\text{ANALYST}_{it}$ & 1人以上のアナリストがフォローしている企業であれば1、\\
+  & そうでなければ0を与えるダミー変数 \\
+  $\text{AGE}_{it}$ & t年時点でCompustatに収録されている企業年数 \\
+  $\text{ATURN}_{it}$ & 売上高÷総資産の平均値 \\
+  $\text{BIG4}_{it}$ & 監査人が4大監査法人であれば1、そうでなければ0を与えるダミー変数\\
+  $\text{BTM}_{it}$ & 簿価時価比率 \\
+  $\text{CFO}_{it}$ & 営業活動によるキャッシュ・フロー÷総資産額の平均値\\
+  $\text{CURR}_{it}$ & 流動比率\\
+  $\text{DISTRESS}_{it}$ & Altman (1983) に基づいて算定したZスコア\\
+  & {$\!
+      \begin{aligned}
+       0.717 \times \frac{\text{運転資本}}{\text{総資産}} &+ 0.847 \times \frac{\text{留保利益}}{\text{総資産}} 
+       + 3.107 \times \frac{\text{利息・税控除前利益}}{\text{総資産}} \\
+       &+ 0.42 \times \frac{\text{自己資本簿価}}{\text{総負債}}
+       + 0.998 \times \frac{\text{売上高}}{\text{総資産}}
+      \end{aligned} $} \\
+  $\text{FOREIGN}_{it}$ & 外国為替損益が0でなければ1、そうでなければ0を与えるダミー変数 \\
+  $\text{GROWTH}_{it}$ & t-1期からt期への売上高の変化額÷t-1時点の売上高 \\
+  $\text{INVENTORY}_{it}$ & 棚卸資産÷総資産\\
+  $\text{LEV}_{it}$ & 長期借入金 (long-term debt) と短期借入金の合計額÷総資産 \\
+  $\text{LNASSETS}_{it}$ & 総資産額 (単位: 100万) の自然対数 \\
+  $\text{LNMARKET}_{it}$ & 時価総額 (単位: 100万) の自然対数 \\
+  $\text{LOSS}_{it}$ & operating income after depreciationが\\ 
+  & マイナスであれば1、そうでなければ0を与えるダミー変数 \\
+  $\text{RESTATE}_{it}$ & t期の財務諸表について、後に訂正財務諸表を提出していれば1、\\
+  & そうでなければ0を与えるダミー変数 \\
+  $\text{ROA}_{it}$ & 当期純利益÷総資産の平均値\\
+  $\text{WEAK}_{it}$ & 監査報告書において、内部統制に関する脆弱性が1点以上指摘されていれば1、\\
+  & そうでなければ0を与えるダミー変数\\ 
+\end{longtable}
