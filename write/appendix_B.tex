@@ -1,5 +1,5 @@
 \section{変数の定義}
-\begin{longtable}[c]{ll}
+\begin{longtable}[c]{lp{13cm}}
  \caption{Variable Descriptions}
  \label{tab:appB}
  \\
@@ -11,8 +11,9 @@
  \hline
  \endfoot
  % ------------------------
-  $\mathit{ABSACC}_{it}$ & 全ての産業--年度において最低10個の観測値をもとに以下の回帰式を推定し、\\
-  & 得られた誤差を業績とマッチさせて算定した裁量的会計発生高 \vspace{0.5cm} \\
+  $\mathit{ABSACC}_{it}$ & 全ての産業--年度において最低10個の観測値をも
+ とに以下の回帰式を推定し、得られた誤差を業績とマッチさせて算定した裁量
+ 的会計発生高 \vspace{0.5cm} \\
   \vspace{0.3cm}
   & {$\!
       \begin{aligned}
@@ -27,13 +28,13 @@
      $\Delta \mathit{REC}$ & 売上債権の変化額 \\
      $\mathit{PPE}$ & 償却性固定資産 \\ \hline
     \end{tabular} \vspace{0.3cm} \\ 
-  & 上記の回帰式から得られた各観測値の誤差を、\\
-  & 同じSIC (two-digit) コードでROAが最も近似している観測値から引いた絶対値を \\
-  & $\mathit{ABSACC}$ としている。\\
-  $\mathit{ANALYST}_{it}$ & 1人以上のアナリストがフォローしている企業であれば1、\\
-  & そうでなければ0を与えるダミー変数 \\
+  & 上記の回帰式から得られた各観測値の誤差を、同じSIC (two-digit) コード
+ でROAが最も近似している観測値から引いた絶対値を $\mathit{ABSACC}$ とし
+ ている。\\
+  $\mathit{ANALYST}_{it}$ & 1人以上のアナリストがフォローしている企業で
+ あれば1、そうでなければ0を与えるダミー変数 \\
   $\mathit{AGE}_{it}$ & $t$ 期時点でCompustatに収録されている企業年数 \\
-  $\mathit{ATURN}_{it}$ & 売上高÷総資産の平均値 \\
+  $\mathit{ATURN}_{it}$ & 売上高 $\div$ 総資産の平均値 \\
   $\mathit{BIG4}_{it}$ & 監査人が4大監査法人であれば1、そうでなければ0を与えるダミー変数\\
   $\mathit{BTM}_{it}$ & 簿価時価比率 \\
   $\mathit{CFO}_{it}$ & 営業活動によるキャッシュ・フロー÷総資産額の平均値\\
@@ -52,11 +53,11 @@
   $\mathit{LEV}_{it}$ & 長期借入金 (long-term debt) と短期借入金の合計額÷総資産 \\
   $\mathit{LNASSETS}_{it}$ & 総資産額 (単位: 100万) の自然対数 \\
   $\mathit{LNMARKET}_{it}$ & 時価総額 (単位: 100万) の自然対数 \\
-  $\mathit{LOSS}_{it}$ & operating income after depreciationが\\ 
-  & マイナスであれば1、そうでなければ0を与えるダミー変数 \\
-  $\mathit{RESTATE}_{it}$ & $t$ 期の財務諸表について、後に訂正財務諸表を提出していれば1、\\
-  & そうでなければ0を与えるダミー変数 \\
+  $\mathit{LOSS}_{it}$ & operating income after depreciationがマイナスで
+ あれば1、そうでなければ0を与えるダミー変数 \\
+  $\mathit{RESTATE}_{it}$ & $t$ 期の財務諸表について、後に訂正財務諸表を
+ 提出していれば1、そうでなければ0を与えるダミー変数 \\
   $\mathit{ROA}_{it}$ & 当期純利益÷総資産の平均値\\
-  $\mathit{WEAK}_{it}$ & 監査報告書において、内部統制に関する脆弱性が1点以上指摘されていれば1、\\
-  & そうでなければ0を与えるダミー変数\\ 
+  $\mathit{WEAK}_{it}$ & 監査報告書において、内部統制に関する脆弱性が1点
+ 以上指摘されていれば1、そうでなければ0を与えるダミー変数 \\  
 \end{longtable}
