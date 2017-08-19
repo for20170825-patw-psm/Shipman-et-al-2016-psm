@@ -79,5 +79,57 @@
 
 \paragraph{傾向スコア推定後のマッチング・プロシージャ (Table 1 Panel C)}
 
-% p. 220 最終段落から p. 221 にかけての、``with replacement'' および
-% ``without replacement'' ってなんでしょうか。
+\begin{itemize}
+ \item 置換処理 (replace)
+       \begin{itemize}
+        \item 55 件の研究において、マッチングに際して置換処理がおこなわ
+              れているか否か (matching is performed with or without
+              replacement) 開示されていない。
+        \item 開示している 31 件の研究のうち、5 件が置換あり、26 件が置
+              換なしであった。
+       \end{itemize}
+ \item キャリパー距離 (caliper distance)
+       \begin{itemize}
+        \item マッチング・プロシージャとしてキャリパー距離を開示して
+              いる研究は 29 件のみ。
+        \item 開示されているキャリパー距離の分布は、0.00005 から
+              0.23 までで、よく用いられている距離は 0.01 (4 件)、0.03 (6
+              件)、および 0.10 (5 件) である。
+       \end{itemize}
+ \item 1 対 1 と 1 対多のどちらのマッチングを用いるか
+       \begin{itemize}
+        \item 1 対 1 (one--to--one) が 68 instances であるのに対し、1 対
+              多 (one--to--many) が 11 instances である。
+       \end{itemize}
+\end{itemize}
+
+\paragraph{covariate balance (Table 1 Panel C)}
+
+\begin{itemize}
+ \item マッチング変数の数 (number of matching variables)、キャリパー距離
+       (caliper distance)、グループ・サイズ (group size) などの要因は、
+       PSM によってサンプルに covariate balance が生じる程度に影響する。
+ \item しかしながら、covariate balance の決定はマッチング・クオリティ
+       についての主観的な判断を要求するため、マッチングが実際に適切な
+       (sufficient) balance を達成しているか否か、しばしば不透明である。
+ \item サーベイの結果、35 件はマッチされたサンプル (matched sample) の
+       covariate balance について議論しておらず、4 件のみ傾向スコ
+       アの平均差について議論している。
+ \item 研究においては、残存した covariate imbalance の効果を緩和するため
+       に、PSM のサブサンプルにおいて MR を使うことができる。
+ \item サーベイの結果、58 件は (第 2 段階の) ATE を推定する際に MR を用
+       いている、22 件は結果変数の距離を t 検定することによって、処置効
+       果を推定している、そして、6 件は推定手法を開示していないというこ
+       とが明らかとなった。
+\end{itemize}
+
+\paragraph{サーベイの結論}
+
+\begin{itemize}
+ \item 本節で指摘した問題点は現在の文献でも改善されていない。
+ \item Heckman (1979) モデルについて含意を示した Lennox et al. (2012,
+       589) の結論と同様に、われわれは、多数の研究が ``重要な計量経済学
+       上の問題点および PSM の利用をとりまく問題点に対する理解
+       (appreciation) がほとんど無いままに、'' PSM を実施していると結論
+       付ける。 
+\end{itemize}
