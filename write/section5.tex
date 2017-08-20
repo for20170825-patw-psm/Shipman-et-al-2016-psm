@@ -1,0 +1,176 @@
+\section{Suggestions and consideration for future research}
+\paragraph{本節の検討内容}
+\begin{itemize}
+ \item 内生性問題に対する``特効薬''は存在しないため、
+       あらゆる方法で慎重に検討する必要がある。
+ \item PSMは、観測不可能な要因を選択する上での内生性を特定するものではないが、
+       FFMに関する内生性については、有用であると考えられる。
+ \item 本節では、PSMを利用する上でより説得力を高めるための提言と、
+       PSMを利用した分析結果を評価する際に検討すべき事項について述べる。
+\end{itemize}
+
+\subsection{Suggestions for improved application of propensity score matching}
+\paragraph{PSMの利用を検討している研究に対する提言}
+\begin{enumerate}
+ \item FFMに関する識別問題に取り組むための手段としてPSMを利用すべきあり、PSMが
+       ``内生性''``自己選択''``欠落変数バイアス''に関する一般的な懸念事項を緩和すると
+       示唆するのは避けるべきである。
+ \item PSMを利用した単一の (もしくは小数の) の結果だけをもとに、推論を行うべきではない。
+       \begin{itemize}
+        \item ``マッチング手法は回帰の修正 (regression adjustment) と
+              対立するものではないと認識されるべきであり、実際、その2つの手法は補完的であり、
+              組み合わせて使用することが望ましい。'' (Stuart, 2010, 2)
+       \end{itemize}
+ \item PSMとMRの両方を利用する場合、
+       PSMのマッチング段階において、MRから除かれる変数を含めるべきではない。
+       \begin{itemize}
+        \item MRで除かれる変数についてマッチングを行うことで、
+              MRとPSMが不均一 (unequal) になり、一方もしくは両者の特性 (specifications) に
+              疑問が生じることになる。
+        \item PSMの第2段階において、
+              全てのコントロール変数を含めてMRを推定した場合の処置効果を推定すべき (``二重にロバストな推定'' (``doubly robust''estimation))
+       \end{itemize}
+ \item リサーチ・デザインの再現可能性と明瞭性を高めるために、
+       PSMの設定を開示すべきである。具体的な内容は以下の通りである。
+       \begin{enumerate}
+        \item 傾向スコアを推定するためのモデル (第1段階)
+        \item ATEを推定するためのモデル (第2段階)
+        \item マッチング手法によって観測値を置き替えるか否か
+        \item 処置済みの各観測値 (treated observation) に対して、マッチさせたコントロールの観測値数
+        \item (実施する場合、) キャリパー距離 (caliper distance)
+        \item マッチングの質 (共変量のバランス (covariate balance))
+       \end{enumerate}
+\end{enumerate}
+
+\subsection{Considerations when using propensity score matching}
+\paragraph{PSMを利用している場合の検討事項}
+\begin{enumerate}
+ \item 処置特性 (treatment specification) に関する検討
+       \begin{itemize}
+        \item 適切なマッチングの数が十分に存在している場合、
+              効果量が最大となるような、母集団から抽出した部分集合に焦点をあてるために、
+              ``最大限の''処置を施された観測値を``最小限の''処置を施された観測値に
+              マッチさせることを、代替的手法として推奨する。
+       \end{itemize}
+ \item マッチング変数と処置効果の関係に関する検討
+       \begin{itemize}
+        \item treatmentの選択を決定する性質も、因果効果 (the effect of treatment) に関連している
+              可能性がある。
+        \item 機械的に、``最大の''因果効果を持つ観測値を選択し、また、``最小の''効果を維持させることで、
+              PSMはバイアスのかかった推定 (inference) を実施することになる (Heckman et al., 1998)。
+       \end{itemize}
+ \item 代替的なマッチング設定 (design choiced) が同様の結果を生みだすか否かの検討
+       \begin{itemize}
+        \item DeFond et al. (2015) は、PSMの設定を無作為に実施し、
+              証拠が誤りである可能性の評価についても明記している。
+       \end{itemize}
+\end{enumerate}
+
+\subsection{Alternatives to propensity score matching for alleviating functional form misspecification}
+\begin{itemize}
+ \item 以下の方法を実施することで、common supportの範囲外の観測値に関するFFMを緩和することができる一方で、
+       PSMにおける裁量性と標本分散の一部を排除することができる。
+       \begin{enumerate}
+        \item 重複を制限するうえで有効な要因 (例. 企業規模、収益性) を特定し、common supportに該当するサンプルを制限する。
+        \item 傾向スコアを推定し、そのスコアが、[$\alpha$, $1-\alpha$] (ただし、$\alpha$は、
+              客観的に決定されるcutoff point (例えば、0.10)) の範囲外となるような極端な値をとるサンプルを除く (Crump, Hotz, Imbens and Mitnik 2009)。
+       \end{enumerate}
+ \item その他にも様々な対処法があるが、どちらか一方を代替するのではなく、FFMを緩和するために補完しあうものである。
+ \item PSMで得た結果の頑健性の確認 (stress testing) こそ重要であり、
+       証拠の妥当性に対する信頼性を向上させる。
+\end{itemize}
+
+% \section{Suggestions and consideration for future research}
+% \paragraph{PSMの利用を検討している研究に対する提言}
+% \begin{itemize}
+%  \item 内生性問題に対する``特効薬''は存在しない。
+%  \item 研究者は、適切なリサーチ・デザインを選択する際に、
+%        内生性問題についてあらゆる方法で慎重に検討する必要がある。
+%  \item 前述のとおり、PSMは観測不可能な要因の選択に関する内生性を特定するものではない。
+%  \item ただし、FFMに関する内生性については、有用である可能性がある。
+%  \item PSMを利用する上でより説得力のあるものにするための提言と、
+%        PSMを利用した結果を評価する際に検討する事項について述べる。
+% \end{itemize}
+
+% \subsection{Suggestions for improved application of propensity score matching}
+% \begin{enumerate}
+%  \item FFMに関する識別問題に取り組むための手段としてPSMを利用すべきあり、PSMが
+%        ``内因性''``自己選択''``欠落変数バイアス''に関する一般的な懸念事項を緩和すると
+%        示唆するのは避けるべきである。
+%  \item 一般に、PSMとMRを組みあわせて使用する場合には慎重になった方が良いと考えられる。
+%        Stuart (2010, 2) によると、``マッチング手法は回帰の修正 (regression adjustment) と
+%        対立するものではないと認識されるべきであり、実際、その2つの手法は補完的であり、
+%        組み合わせて使用することが望ましい。''と指摘されている。
+%        このように、PSMを利用した単一の (もしくは小数の) の結果だけをもとに
+%        推論を行う前に、慎重に検討した方がよい。
+%  \item PSMとMRの両方を利用する場合、
+%        PSMのマッチング段階において、MRから除かれる変数を含めることは
+%        やめた方が良い。
+%        MRにおいて除かれる変数についてマッチングを行うことで、
+%        MRとPSMが不均一 (unequal) になり、一方もしくは両者の特性 (specifications) に
+%        疑問が生じることになる。同様に、PSMの第2段階において、
+%        全てのコントロール変数 (``二重の頑健性''チェック (``doubly robust''estimation)) を
+%        含めて、MRを推定した場合の処置効果を推定すべきである。
+%  \item リサーチ・デザインの再現可能性と明瞭性に役立てるために、
+%        PSMの研究上の設定を開示すべきである。具体的な内容は以下の通りである。
+%        \begin{enumerate}
+%         \item 傾向スコアを推定するためのモデル (第1段階)
+%         \item ATEを推定するためのモデル (第2段階)
+%         \item マッチング手法によって観測値を置き替えるか否か
+%         \item 処置済みの各観測値に対して、マッチさせたコントロールの観測値数
+%         \item (実施する場合には、) キャリパー距離 (caliper distance)
+%         \item マッチングの質 (共変量のbalance)
+%        \end{enumerate}
+% \end{enumerate}
+
+% \subsection{Considerations when using propensity score matching}
+% \begin{enumerate}
+%  \item 処置特性 (treatment specification) に関する検討
+%        \begin{itemize}
+%         \item continuous constructの水準に基づいて因果を検証した場合、
+%               PSMはcutoff周辺の観測値と優先的させる傾向がある。
+%         \item この場合、マッチしたサンプルから得られた結果を母集団に一般化できるか
+%               かどうかを検討しなければならない。
+%         \item 適切なマッチングの数が十分に存在している場合、
+%               効果量が最大となるような、母集団から抽出した部分集合に焦点をあてるために、
+%               ``最大限の''処置を施された観測値を``最小限の''処置を施された観測値に
+%               マッチさせることを、代替的手法として推奨する。
+%        \end{itemize}
+%  \item マッチング変数と処置効果の関係に関する検討
+%        \begin{itemize}
+%         \item treatmentの選択を決定する性質も、因果効果 (the effect of treatment) に関連している
+%               可能性がある。
+%         \item 例えば、規模の大きいクライアントは、
+%               小規模な監査人よりも4大監査法人から得られるベネフィットが多いと想定する。
+%         \item 規模の大きいクライアントは、
+%               合理的な反実仮想 (counterfactuals) 
+%               (規模の大きいクライアントが小規模な監査人から得られるベネフィットは、
+%               4大監査法人から得られるベネフィットよりも大きい)  
+%               を有するとは考えられないため、PSMはそれらを放棄する。
+%         \item この場合、マッチしたサンプルから得られるthe likelihood of exclusion (除外される傾向?)
+%               は、因果効果と関連する。
+%         \item 機械的に、``最大の''因果効果を持つ観測値を選択し、また、``最小の''効果を維持させることで、
+%               PSMはバイアスのかかった推定 (inference) を実施することになる (Heckman et al., 1998)。
+%        \end{itemize}
+%  \item 代替的なマッチング設定 (design choiced) が同様の結果を生みだすか否かの検討
+%        \begin{itemize}
+%         \item 代替的なリサーチ・デザインを推定するためにPSMを利用する際には、
+%               慎重になる必要がある。
+%               この点について、DeFond et al. (2015) は、PSMの設定を無作為に実施し、
+%               証拠が誤りである可能性の評価についても明記している。
+%        \end{itemize}
+% \end{enumerate}
+
+% \subsection{Alternatives to propensity score matching for alleviating functional form misspecification}
+% \begin{itemize}
+%  \item 以下の方法を実施することで、common supportの範囲外の観測値に関するFFMを緩和することができる一方で、
+%        PSMにおける裁量性と標本分散の一部を排除することができる。
+%        \begin{enumerate}
+%         \item 重複を制限するうえで有効な要因 (例. 企業規模、収益性) を特定し、common supportに該当するサンプルを制限する
+%         \item 傾向スコアを推定し、そのスコアが、[$\alpha$, $1-\alpha$] (ただし、$\alpha$は、
+%               客観的に決定されるcutoff point (例えば、0.10)) の範囲外となるような極端な値をとるサンプルを除く (Crump, Hotz, Imbens and Mitnik 2009)。
+%        \end{enumerate}
+%  \item その他にも様々な対処法があるが、どちらか一方を代替するのではなく、FFMを緩和するために補完しあうものである。
+%  \item PSMで得た結果の頑健性の確認 (stress testing) こそ重要であり、
+%        証拠の妥当性に対する信頼性を向上させる。
+% \end{itemize}
