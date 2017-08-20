@@ -28,7 +28,59 @@
 \begin{document}
 % \renewcommand{\rmdefault}{ptm}	%{\rmfamily ...} または \textrm を Times に
 \bibliographystyle{./bib/jecon}
+\tit\documentclass[10pt,uplatex,dvipdfmx]{jsarticle} %times new roman
+\usepackage{ascmac}	% required for `\itembox' (yatex added)
+\usepackage{amsmath}    % \dfrac 等の数式内の関数を使用する際に必要
+\usepackage{graphicx}   % graphicx Excel から図を入れたいときは、
+                        % \special{pdf:minorversion=6}
+                        % Excel から pdf をとりこみたい場合、"pdfcrop"
+                        % をかましておくと余白が効率化される
+\usepackage{tikz}
+\usepackage{ulem}       % \uline (下線) \uuline (二重下線) を使用する際に必要
+\usepackage{natbib}     % jecon を使用する際に必要
+\usepackage{bm}         % ベクトルを表記する際に必要
+\usepackage{threeparttable} % 表注; includegraphics する場合は
+                            % threeparttable 環境を minipage 環境にいれ
+\usepackage{newtxtext,newtxmath}        % 数式を Times フォントに変更する
+\usepackage{url}
+\usepackage{lscape,rotating}    % sideways 環境でその部分だけ rotate。
+                                % caption もまとめて rotate したい場合は
+                                % sidewaystable 環境もしくは
+                                % sidewaysfigure 環境を用いる
+\usepackage{dcolumn}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{pxrubrica}          % \ruby[オプション]{親文字}{ルビ文字}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\rhead{担当: 井上謙仁・久多里桐子・大洲裕司}
+\lhead{PATW@北海道情報大学 \\ 2017年8月25日 (金)}
+
+% \rhead{井上謙仁・久多里桐子・大洲裕司}
+% \lhead{PATW 於 北海道情報大学 (2017--08--25)}
+\begin{document}
+% \renewcommand{\rmdefault}{ptm}	%{\rmfamily ...} または \textrm を Times に
+\bibliographystyle{./bib/jecon}
 \title{Propensity Score Matching in Accounting Research}
+\author{Shipman, Jonathan E. \and Swanquist, Quinn T. \and Whited, Robert L.}
+\date{\textit{The Accounting Review} (2017), 92 (1), pp. 213--244}
+\maketitle
+\thispagestyle{fancy}
+\input{../write/abstract.tex}
+\input{../write/intro.tex}
+\input{../write/sec02.tex}
+\input{../write/sec03.tex}
+\input{../write/sec04.tex}
+\input{../write/sec04.tex}
+\input{../write/section5.tex}
+\input{../write/sec06.tex}
+\appendix
+\setcounter{section}{1}
+\input{../write/appendix_B.tex}
+\bibliography{./bib/myrefs}
+\end{document}
+le{Propensity Score Matching in Accounting Research}
 \author{Shipman, Jonathan E. \and Swanquist, Quinn T. \and Whited, Robert L.}
 \date{\textit{The Accounting Review} (2017), 92 (1), pp. 213--244}
 \maketitle
