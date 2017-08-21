@@ -9,9 +9,9 @@
  \item 期間は、Sarbanes-Oxley (SOX) 法にかかる観測値が取得可能な2004〜2012年である。
  \item 以下の要件に該当するサンプルを除外する。
    \begin{itemize}
-    \item 海外企業、および金融業（2桁SICコードの60–69）に属する観測値
+    \item 海外企業、および金融業（2桁SICコードの60--69）に属する観測値
     \item 総資産が500ドル以下の観測値
-    \item 2桁SICコードに基づく産業年が10観測値未満のもの（異常会計発生高を計算するため）
+    \item 2桁SICコードに基づく産業年が10観測値未満のもの（裁量的会計発生高を計算するための要件）
     \item 欠損値のある観測値
    \end{itemize}
  \item 最終サンプルは、監査法人の規模の分析とアナリストのフォローの分析で29,227観測値、内部統制の弱さの分析で20,385観測値である。
@@ -29,12 +29,14 @@
  \item 監査法人、内部統制の弱さ、財務諸表の再報告にかかるデータ：Audit Analytics
  \item アナリストにかかるデータ：the Institutional Brokers’ Estimate System (I/B/E/S)
  \item 財務データ：Compustat
- \item Table 2：記述統計量
+  \begin{itemize}
+   \item Table 2：記述統計量
+  \end{itemize}
 \end{itemize}
 
 \subsection*{Research Design}
 
-$\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれぞれを割り当て変数とし、PSMを行い、ATEを推定する
+$\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれぞれを割り当て変数とし、PSMを行い、ATEを推定する。
 
 \paragraph{予測モデル（第1段階）}
 
@@ -44,7 +46,7 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
 
 \begin{itemize}
  \item $\mathit{D}_{it}$は、$\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$で、処置群と対照群に割り当てるダミー変数
- \item PSMのキャリパー距離は、0.03とする
+ \item PSMのキャリパー距離は、0.03とする。
 \end{itemize}
 
 \paragraph{結果モデル（第2段階）}
@@ -54,7 +56,7 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
 \end{equation}
 
 \begin{itemize}
- \item $\mathit{QUALITY}_{it}$は、財務報告の質を示し、本分析では、異常会計発生高（$\mathit{ABSACC}_{it}$）、および財務諸表の再報告（$\mathit{RESTATE}_{it}$）で評価している。
+ \item $\mathit{QUALITY}_{it}$は、財務報告の質を示し、本分析では、裁量的会計発生高（$\mathit{ABSACC}_{it}$）、および財務諸表の再報告（$\mathit{RESTATE}_{it}$）のそれぞれで評価している。
  \item $X_{it}$は、企業規模（$\mathit{LNASSETS}_{it}$）、パフォーマンス（$\mathit{ROA}_{it}$、$\mathit{ATURN}_{it}$）、財政状態（$\mathit{CURR}_{it}$、$\mathit{LEV}_{it}$、$\mathit{DISTRESS}_{it}$）、設立年数（$\mathit{AGE}_{it}$）、成長性（$\mathit{GROWTH}_{it}$）、企業価値（$\mathit{BTM}_{it}$）、年度固定効果を用いる。
   \begin{itemize}
    \item Appendix B：変数の定義
@@ -64,7 +66,7 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
 
 \subsection*{Diagnosing Function Form Misspecification}
 \begin{itemize}
- \item MRにおいて、FFMが懸念されるのかを判定する。
+ \item MRにおいて、FFMが懸念されるのかについて判定する。
  \item Ramsey（1969）のRESETテストがFFMを見る手法として用いられることがある（Lawrence et al. 2011を見よ）。
  \item ただし、これは、変数の非線形性が追加的な説明を与えているのかどうかについて検証するものであり、結果変数と非線形な関係にある変数がATEの推定にバイアスを与えてるのかどうかを見るものではない。
 \end{itemize}
@@ -103,7 +105,6 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
 
 \begin{itemize}
  \item Big 4の監査法人のクライアントの傾向スコアは、0.9〜1の範囲内に集中し、非Big 4の監査法人のクライアントの傾向スコアは、0〜0.2に集中している。
- \item これは、Big 4（非Big 4）を選択する多くのクライアントは、非Big 4（Big 4）を選択する可能性が低いことを示している。
  \item これは、共変量が割り当ての決定に大きく影響していることを示している。
  \item 結果的に、マッチングは、主として極端でない傾向スコアの範囲（ここでは、0.2〜0.9）の範囲内でなされることになる。
 \end{itemize}
@@ -140,8 +141,8 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
 
 \begin{itemize}
  \item アナリストのフォロー数を詳細にみる（1〜5人、6〜10人、11人以上）。
- \item プロットした結果、アナリストの数が少なければ少ないほど、アナリストに全くフォローされてない観測値とのoverlapが高まることがわかる。
- \item これは、マッチングが、フォローしているアナリストの数が低い企業となされる可能性が高いことを示している。
+ \item プロットした結果、アナリストの数が少なければ少ないほど、アナリストに全くフォローされてない観測値とのoverlapが大きくなることがわかる。
+ \item これは、マッチングがフォローしているアナリストの数の少ない企業となされる可能性が高いことを示している。
 \end{itemize}
 
 \subsection*{Matching without Replacement}
@@ -153,17 +154,21 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
 \begin{itemize}
  \item 置き換えをせず1対1でマッチングすると、かなりの数の観測値を除去することになる。
  \item 事実、“full sample”を比較して、監査法人の規模で30\%、内部統制の弱さで14\%、アナリストのフォローで28\%のサンプルしか確保できなかった。
- \item また、マッチングしたのちのサンプルは、Second Tierのクライアントや、アナリストのフォロー数が少ない観測値で構成されていることもわかる。
-これらは、ATEを推定するPSMの規模が、外的な妥当性を減少させる、もしくは欠落させてしまう可能性を示唆している。
+ \item また、マッチングしたサンプルは、Second Tierのクライアントや、アナリストのフォロー数が少ない観測値で構成されていることもわかる。
+  \begin{itemize}
+   \item サンプルが小さいことは、外的な妥当性を減少させる、もしくは欠落させてしまう可能性を有している。
+  \end{itemize}
 \end{itemize}
 
 \paragraph{MRとPSM間における共変量とATEの比較（Table 5, Panel B）}
 
 \begin{itemize}
  \item 共変量は、PSMを行うことにより、バランスが向上していることがわかる。
- \item これは、MRにおいて、処置群と対照群の相違が残ったまま、ATEを推定していることを示す。
- \item 異常会計発生高を従属変数とした場合、MRのATEはすべて有意であるが、PSMはすべて非有意であり、Chow（1960）の検定も、すべての係数間で有意である。
- \item 一方、再表示を従属変数とした場合は、MRとPSMのATEともにすべて類似した結果を示すが、係数を比較すると、有意な差が検出されるものが存在している。
+  \begin{itemize}
+   \item これは、MRにおいて、処置群と対照群の相違が残ったまま、ATEを推定していることを示す。
+  \end{itemize}
+ \item 裁量的会計発生高を従属変数とした場合、MRのATEはすべて有意であるが、PSMはすべて非有意であり、Chow（1960）の検定も、すべての係数間で有意である。
+ \item 一方、財務諸表の再報告を従属変数とした場合は、MRとPSMのATEともにすべて類似した結果を示すが、係数を比較すると、有意な差が検出されるものが存在している。
 \end{itemize}
 
 \paragraph{まとめ}
@@ -171,9 +176,8 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
  \item 以上の分析から、MRとPSMでは推定されうATEが有意に異なっていることが明らかとなった。
  \item もし、PSMのみで分析すると、監査法人の規模、内部統制の弱さ、およびアナリストのフォローは、財務報告の質に影響を与えていないという結果のみを得ることになる。
  \item しかし、この結果を受容するのは時期尚早かもしれない。
- \item 以下で、PSMリサーチ・デザインを変更することで、結果が変化することを示す。
+ \item 以下で、PSMの手法を変更することで、結果が変化することを示す。
 \end{itemize}
-
 
 \subsection*{Matching with Replacement}
 
@@ -182,21 +186,21 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
 \paragraph{サンプルの構成（Table 6, Panel B）}
 
 \begin{itemize}
- \item （2）列目は、サンプルサイズが小さい方の群を処置群とし、サンプルサイズの大きな方の群にマッチングの置換を認める場合の結果である（Panel A）。
+ \item （2）列目は、サンプルサイズが小さい方の群を処置群とし、サンプルサイズの大きな方の群にマッチングの置き換えを認める場合の結果である（Panel A）。
  \item サンプルサイズが大きくなっており、キャリパー距離（0.03）の間でより多くの対照群の観測値がマッチングしていることがわかる。
- \item （3）列目は、サンプルサイズの大きな方の群を処置群とし、サンプルサイズの小さい方の群にマッチングの置換を認める場合の結果である。
- \item サンプルサイズがかなり大きくなっており、ウェイトがいずれも5以上であることから、対照群の観測値がより多くの回数のマッチングが行われていることがわかる。
+ \item （3）列目は、サンプルサイズの大きな方の群を処置群とし、サンプルサイズの小さい方の群にマッチングの置き換えを認める場合の結果である。
+ \item サンプルサイズがかなり大きくなっており、ウェイトがいずれも5以上であることから、対照群の観測値がより多くの回数マッチングしていることがわかる。
  \item マッチングの手法ごとにサンプルの構成を比較した結果、9個の比較中8個で有意な差が認められる。
- \item 特に、Second Tierのクライアントの割合と、アナリストのフォロー数の平均値は、マッチングの手法間で顕著な差があり、その影響はかなりのものである。
+ \item 特に、Second Tierのクライアントの割合と、アナリストのフォロー数の平均値は、マッチングの手法間で顕著な差がある。
   \begin{itemize}
-   \item マッチング手法の違いが、サンプルサイズとサンプルの構成に影響を与えてしまう。
+   \item マッチング手法の違いが、サンプルサイズとサンプルの構成に影響を与えてしまうことが示唆されている。
   \end{itemize}
 \end{itemize}
 
 \paragraph{ATEの比較（Table 6, Panel B, C）}
 
 \begin{itemize}
- \item 監査法人の規模で割り当てた場合の結果は、いずれも非優位である。
+ \item 監査法人の規模で割り当てた場合の結果は、いずれも非有意である。
  \item しかし、ATEの差が有意に検出されているものが存在する（6個の比較中3個）。
  \item 内部統制の弱さ、およびアナリストのフォローで割り当てた場合の結果は、マッチングの手法ごとに異なっており、ATEの差も有意に検出されているものがある（12個の比較中7個）。
   \begin{itemize}
@@ -217,7 +221,7 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
 \paragraph{変数を置き換えてマッチングを行なった場合のATE（Table 7, Panel B）}
 
 \begin{itemize}
- \item ATEを比較すると、$\mathit{LNASSETS}_{it}$のときよりも、$\mathit{LNMARKET}_{it}$のときのATEの方が、多く有意であることがわかる。
+ \item $\mathit{LNASSETS}_{it}$のATEよりも、$\mathit{LNMARKET}_{it}$のATEの方が、有意であるものが多いことがわかる。
  \item 特に、アナリストのフォローで割り当てとし、財務諸表の再報告を従属変数とした時のATEは、Table 5の全サンプルとマッチングサンプルで非有意だったにもかかわらず、変数を置き換えると有意な結果が確認される。
  \item Chow（1960）の検定によれば、6個の比較中、3個でATEが有意な差であることが確認される。
 \end{itemize}
@@ -238,11 +242,13 @@ $\mathit{BIG}4_{it}$、$\mathit{WEAK}_{it}$、$\mathit{ANALYST}_{it}$のそれ�
    \item 内部統制の弱さ：$\mathit{FOREIGN}_{it}$
    \item アナリストのフォロー：$\mathit{BTM}_{it-1}$
   \end{itemize}
- \item 以上でマッチングし、ATEを求めた結果は、（3）列目と（6）列目に示されているが、これまでの検証で一貫して有意である内部統制の弱さで割り当て、財務諸表の再報告従属変数としたATE以外、すべて非有意である。
+ \item 以上でマッチングし、ATEを求めた結果は、（3）列目と（6）列目に示されているが、これまでの検証で一貫して有意である内部統制の弱さで割り当て、財務諸表の再報告を従属変数としたATE以外、すべて非有意である。
   \begin{itemize}
-   \item 以上から、ATEの推定は、PSMのモデルの設定に影響を受けやすいことが明らかである。
+   \item 以上から、ATEの推定は、PSMのモデルの設定から影響を受けやすいことが明らかである。
+  \end{itemize}
+ \item 以上の変数の選択は、結果の頑健性を示すために、``事後的''に選択されたことに留意するべきである。
+ \item すべての$X$は、結果に同じような影響を与えるとは限らない。
+  \begin{itemize}
+   \item ここから、PSMの変数の選択において、十分な考慮をするこの重要さが示唆される。
   \end{itemize}
 \end{itemize}
-
-\paragraph{まとめ}
-%ちょっと難しいので保留しています。
