@@ -8,7 +8,7 @@
        処置群が無作為割り当てではない (non-random treatment assignment) ために、
        内生性の問題が生じてしまう。
  \item 内生性を緩和させるための従来の手法
-       \b\section{Introduction}
+\end{itemize}
 
 \paragraph{研究の背景: 内生性の問題に対する従来の手法の問題点}
 \begin{itemize}
@@ -221,84 +221,84 @@
 %  \item Suggestion and consideration for future research: マッチング手法に関する今後の課題の提示 
 %  \item Conclusion: 本論文の発見事項とインプリケーション 
 % \end{enumerate}egin{itemize}
-        \item アーカイバル研究では、伝統的には
-              重回帰 (multiple regression, MR) モデルを利用
-        \item ただし、MRを利用してバイアスのかかっていない推定値を得るためには、
-              結果変数 (Y) と説明変数 (X) の関係に適切な仕様 (前提) を満たす必要がある。
-        \item YとXの関係が前提を満たしていない場合、
-              MRは``回帰式の特定ミス (functional form misspecification, FFM)''の影響を受けることになり、
-              バイアスのかかった推定値を得ることになり得る。
-        \item FFMによる潜在的なバイアスは、処置群 (treatment groups) が似ていないほど、
-              強くなってしまう。
-       \end{itemize}
-\end{itemize}
+%         \item アーカイバル研究では、伝統的には
+%               重回帰 (multiple regression, MR) モデルを利用
+%         \item ただし、MRを利用してバイアスのかかっていない推定値を得るためには、
+%               結果変数 (Y) と説明変数 (X) の関係に適切な仕様 (前提) を満たす必要がある。
+%         \item YとXの関係が前提を満たしていない場合、
+%               MRは``回帰式の特定ミス (functional form misspecification, FFM)''の影響を受けることになり、
+%               バイアスのかかった推定値を得ることになり得る。
+%         \item FFMによる潜在的なバイアスは、処置群 (treatment groups) が似ていないほど、
+%               強くなってしまう。
+%        \end{itemize}
+% \end{itemize}
 
-\paragraph{Propensity score matching (PSM)}
-\begin{itemize}
- \item 変数間の特定の仮定を少なくすることで、
-       上記のような問題を緩和
- \item 処置群から選択された観測値と
-       処置を受ける傾向の推定値を利用して、機械的に、様々な側面から判断したコントロール・グループを
-       マッチ
- \item 変数間の関係 (functional relation) に関する
-       緩い (relaxed) 仮定のもとで、処置効果を直接的かつ直感的に推定可能
- \item ただし、
-       PSMは伝統的なMRの手法が持つ理論的有用性を損なう。
-\end{itemize}
+% \paragraph{Propensity score matching (PSM)}
+% \begin{itemize}
+%  \item 変数間の特定の仮定を少なくすることで、
+%        上記のような問題を緩和
+%  \item 処置群から選択された観測値と
+%        処置を受ける傾向の推定値を利用して、機械的に、様々な側面から判断したコントロール・グループを
+%        マッチ
+%  \item 変数間の関係 (functional relation) に関する
+%        緩い (relaxed) 仮定のもとで、処置効果を直接的かつ直感的に推定可能
+%  \item ただし、
+%        PSMは伝統的なMRの手法が持つ理論的有用性を損なう。
+% \end{itemize}
 
-\paragraph{本論文の検討事項}
-\begin{itemize}
- \item 内生性、MRの手法、FFMに関する問題、マッチング手法のメリット、PSMの設定のインプリケーションについて議論
- \item 以下の雑誌に掲載されている、PSMを利用した86本の論文に対する議論
-       \begin{itemize}
-        \item \textit{The Accounting Review},\textit{Contemporary Accounting Research},\textit{Journal of Accounting and Economics},
-              \textit{Journal of Accounitng Reserach},\textit{Review of Accounting Studies}
-        \item PSMを利用した論文数は増加 (2008年: 0本、2014年: 26本)
-        \item 各論文について、PSMの利用および設定が正当なものであるのかを評価
-       \end{itemize}
- \item 財務報告に関する研究における3つの設定において、PSMを利用した場合に問題が生じる例
-       \begin{enumerate}
-        \item 監査人の規模
-        \item 内部統制の弱さ
-        \item フォローしているアナリスト数
-       \end{enumerate}
- \item マッチング手法の利用もしくは、FFMに基づく内生性問題に取り組む他の手法の利用を検討している研究に対するいくつかの提言
-\end{itemize}
+% \paragraph{本論文の検討事項}
+% \begin{itemize}
+%  \item 内生性、MRの手法、FFMに関する問題、マッチング手法のメリット、PSMの設定のインプリケーションについて議論
+%  \item 以下の雑誌に掲載されている、PSMを利用した86本の論文に対する議論
+%        \begin{itemize}
+%         \item \textit{The Accounting Review},\textit{Contemporary Accounting Research},\textit{Journal of Accounting and Economics},
+%               \textit{Journal of Accounitng Reserach},\textit{Review of Accounting Studies}
+%         \item PSMを利用した論文数は増加 (2008年: 0本、2014年: 26本)
+%         \item 各論文について、PSMの利用および設定が正当なものであるのかを評価
+%        \end{itemize}
+%  \item 財務報告に関する研究における3つの設定において、PSMを利用した場合に問題が生じる例
+%        \begin{enumerate}
+%         \item 監査人の規模
+%         \item 内部統制の弱さ
+%         \item フォローしているアナリスト数
+%        \end{enumerate}
+%  \item マッチング手法の利用もしくは、FFMに基づく内生性問題に取り組む他の手法の利用を検討している研究に対するいくつかの提言
+% \end{itemize}
 
-\paragraph{本論文の貢献}
-\begin{itemize}
- \item DeFond, Erkens and Zhang (2015) を補完
-       \begin{itemize}
-        \item DeFond, Erkens and Zhang (2015)
-              \begin{itemize}
-               \item マッチング手法を利用して、監査人の規模および監査の質の関係について分析
-               \item 設定 (design) をランダムに数千回実行し、総合的な結果を提示
-               \item 分析結果の多くは、4大監査法人は、それ以外の監査法人よりも優れた監査の質を提供していることを示唆
-               \item Lawrence, Minutti-Meza and Zhang (2011) の結果と整合
-              \end{itemize}
-        \item 本論文とDeFond et al. (2015) の違い
-              \begin{itemize}
-               \item DeFond et al. (2015) の主たる目的は、4大監査法人の影響に関する実証的証拠を提供すること
-               \item 本研究も同様のテーマを共有
-               \item ただし、
-                     会計研究においてPSMを利用している論文をレビューし、
-                     PSMの有用性および限界に関する議論を提供し、
-                     一般的な会計研究における設定 (setting) の、
-                     固有の設定 (design choices) に関する影響について明示する、という点で異なる。
-               \item 本論文におけるどの設定 (settings) においても、実証的証拠を提供するものではない。
-              \end{itemize}
-       \end{itemize}
- \item PSMの利用を検討している将来の研究に対する情報提供
-\end{itemize}
+% \paragraph{本論文の貢献}
+% \begin{itemize}
+%  \item DeFond, Erkens and Zhang (2015) を補完
+%        \begin{itemize}
+%         \item DeFond, Erkens and Zhang (2015)
+%               \begin{itemize}
+%                \item マッチング手法を利用して、監査人の規模および監査の質の関係について分析
+%                \item 設定 (design) をランダムに数千回実行し、総合的な結果を提示
+%                \item 分析結果の多くは、4大監査法人は、それ以外の監査法人よりも優れた監査の質を提供していることを示唆
+%                \item Lawrence, Minutti-Meza and Zhang (2011) の結果と整合
+%               \end{itemize}
+%         \item 本論文とDeFond et al. (2015) の違い
+%               \begin{itemize}
+%                \item DeFond et al. (2015) の主たる目的は、4大監査法人の影響に関する実証的証拠を提供すること
+%                \item 本研究も同様のテーマを共有
+%                \item ただし、
+%                      会計研究においてPSMを利用している論文をレビューし、
+%                      PSMの有用性および限界に関する議論を提供し、
+%                      一般的な会計研究における設定 (setting) の、
+%                      固有の設定 (design choices) に関する影響について明示する、という点で異なる。
+%                \item 本論文におけるどの設定 (settings) においても、実証的証拠を提供するものではない。
+%               \end{itemize}
+%        \end{itemize}
+%  \item PSMの利用を検討している将来の研究に対する情報提供
+% \end{itemize}
 
-\paragraph{構成}
-\begin{enumerate}
- \item Background on propensity score matching: PSMの有用性、誤解、適切なリサーチ・デザインの設計に関する議論
- \item Propensity score matching in accounting research: 主な会計雑誌に掲載されたPSMを利用した研究のサーベイ
- \item Empirical examples of propensity score matching in accounitng settings: 3つの会計的な例を設定した場合における、PSMが引き起こす問題に関する実例
- \item Suggestion and consideration for future research: マッチング手法の利用を検討している研究に対する提言 
- \item Conclusion: 本論文の発見事項とインプリケーション 
-\end{enumerate}
+% \paragraph{構成}
+% \begin{enumerate}
+%  \item Background on propensity score matching: PSMの有用性、誤解、適切なリサーチ・デザインの設計に関する議論
+%  \item Propensity score matching in accounting research: 主な会計雑誌に掲載されたPSMを利用した研究のサーベイ
+%  \item Empirical examples of propensity score matching in accounitng settings: 3つの会計的な例を設定した場合における、PSMが引き起こす問題に関する実例
+%  \item Suggestion and consideration for future research: マッチング手法の利用を検討している研究に対する提言 
+%  \item Conclusion: 本論文の発見事項とインプリケーション 
+% \end{enumerate}
 
 
 % \paragraph{問題意識: 内生性の問題に対する従来の手法}
